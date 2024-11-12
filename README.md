@@ -29,10 +29,10 @@ cd JavaPlayer360T
 ### 2. Install Dependencies
 
 Ensure all Maven dependencies are installed by running:
-
+```
 ```bash
 mvn clean install
-
+```
 ### 3. Open the Project in an IDE
 
 To run and test the code, open the project in an IDE that supports Maven projects, such as IntelliJ IDEA or Eclipse.
