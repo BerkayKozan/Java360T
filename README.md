@@ -25,3 +25,26 @@ The unit tests are in `src/test/java/com/example`:
 ```bash
 git clone https://github.com/your-username/JavaPlayer360T.git
 cd JavaPlayer360T
+
+### 2. Install Dependencies
+
+Ensure all Maven dependencies are installed by running:
+
+```bash
+mvn clean install
+
+### 3. Open the Project in an IDE
+
+To run and test the code, open the project in an IDE that supports Maven projects, such as IntelliJ IDEA or Eclipse.
+
+#### Using IntelliJ IDEA
+
+1. **Open** the project by selecting the `pom.xml` file.
+2. **Wait for Maven** to download dependencies.
+3. **Run the Classes**: Right-click `Initiator.java` or `Responder.java` and select **Run 'Initiator.main()'** or **Run 'Responder.main()'**.
+
+#### Using Eclipse
+
+1. Import the project as an **Existing Maven Project**.
+2. Wait for dependencies to load.
+3. Run `Initiator.java` or `Responder.java` as a **Java Application**.
