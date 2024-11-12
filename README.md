@@ -48,3 +48,22 @@ To run and test the code, open the project in an IDE that supports Maven project
 1. Import the project as an **Existing Maven Project**.
 2. Wait for dependencies to load.
 3. Run `Initiator.java` or `Responder.java` as a **Java Application**.
+
+## Running the Project from the Command Line
+
+### 1. Compile the Project
+
+```bash
+mvn clean package
+```
+
+### 2. Run the Initiator Class
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.Initiator"
+```
+
+### 3. Run the Responder Class
+```bash
+mvn exec:java -Dexec.mainClass="com.example.Responder"
+```
