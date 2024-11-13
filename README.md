@@ -57,7 +57,7 @@ This project supports two different types of runs: **Single Process** and **Mult
 
 To run the single process version, only `SingleProcess.java` needs to be executed.
 
-### 1. Run the SingleProcess Class:
+#### 1. Run the SingleProcess Class:
 
    ```bash
    mvn exec:java -Dexec.mainClass="com.example.SingleProcess"
@@ -66,19 +66,19 @@ To run the single process version, only `SingleProcess.java` needs to be execute
 
 For the multi-process version, Initiator and Responder should be run separately.
 
-### 1. Compile the Project
+#### 1. Compile the Project
 
 ```bash
 mvn clean package
 ```
 
-### 2. Run the Initiator Class
+#### 2. Run the Initiator Class
 
 ```bash
 mvn exec:java -Dexec.mainClass="com.example.Initiator"
 ```
 
-### 3. Run the Responder Class
+#### 3. Run the Responder Class
 ```bash
 mvn exec:java -Dexec.mainClass="com.example.Responder"
 ```
