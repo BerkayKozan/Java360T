@@ -57,7 +57,7 @@ This project supports two different types of runs: **Single Process** and **Mult
 
 To run the single process version, only `SingleProcess.java` needs to be executed.
 
-1. **Run the SingleProcess Class**:
+### 1. Run the SingleProcess Class:
 
    ```bash
    mvn exec:java -Dexec.mainClass="com.example.SingleProcess"
