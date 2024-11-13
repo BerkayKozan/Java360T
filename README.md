@@ -49,7 +49,22 @@ To run and test the code, open the project in an IDE that supports Maven project
 2. Wait for dependencies to load.
 3. Run `Initiator.java` or `Responder.java` as a **Java Application**.
 
-## Running the Project from the Command Line
+## Running the Project from Command Line
+
+This project supports two different types of runs: **Single Process** and **Multi-Process**.
+
+### Single Process Run
+
+To run the single process version, only `SingleProcess.java` needs to be executed.
+
+1. **Run the SingleProcess Class**:
+
+   ```bash
+   mvn exec:java -Dexec.mainClass="com.example.SingleProcess"
+   ```
+### Multi Process Run
+
+For the multi-process version, Initiator and Responder should be run separately.
 
 ### 1. Compile the Project
 
