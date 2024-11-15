@@ -1,6 +1,6 @@
 # JavaPlayer360T
 
-JavaPlayer360T is a Java-based project using Maven for managing dependencies and building the project. The main classes, `Initiator` and `Responder`, establish a simple client-server communication model using sockets.
+JavaPlayer360T is a Java-based project managed using Maven. It implements a simple messaging system using both a client-server architecture (with sockets) and a single-process simulation. The project is designed to demonstrate communication between two participants (Initiator and Responder) using Java’s I/O and networking capabilities.
 
 ## Requirements
 
