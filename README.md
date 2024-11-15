@@ -11,8 +11,9 @@ JavaPlayer360T is a Java-based project using Maven for managing dependencies and
 ## Project Structure
 
 The main classes are located in `src/main/java/com/example`:
-- `Initiator.java`: The client/server class that initiates communication.
-- `Responder.java`: The server/client class that responds to `Initiator`.
+- `SingleProcess.java`: Combines both `Initiator` and `Responder` logic into a single process.
+- `Initiator.java`: The server class that initiates communication.
+- `Responder.java`: The client class that responds to `Initiator`.
 
 The unit tests are in `src/test/java/com/example`:
 - `InitiatorTest.java`: Unit tests for `Initiator`.
@@ -41,13 +42,13 @@ To run and test the code, open the project in an IDE that supports Maven project
 
 1. **Open** the project by selecting the `pom.xml` file.
 2. **Wait for Maven** to download dependencies.
-3. **Run the Classes**: Right-click `Initiator.java` or `Responder.java` and select **Run 'Initiator.main()'** or **Run 'Responder.main()'**.
+3. **Run the Classes**: Right-click `SingleProcess.java`, `Initiator.java` or `Responder.java` and select **Run 'SingleProcess.main()', **Run 'Initiator.main()'** or **Run 'Responder.main()'**.
 
 #### Using Eclipse
 
 1. Import the project as an **Existing Maven Project**.
 2. Wait for dependencies to load.
-3. Run `Initiator.java` or `Responder.java` as a **Java Application**.
+3. Run `SingleProcess.java`, `Initiator.java` or `Responder.java` as a **Java Application**.
 
 ## Running the Project from Command Line
 
