@@ -83,3 +83,96 @@ mvn exec:java -Dexec.mainClass="com.example.Initiator"
 ```bash
 mvn exec:java -Dexec.mainClass="com.example.Responder"
 ```
+
+## Running Unit Tests
+
+Unit tests are written using **JUnit 5** and **Mockito**. They are located in `src/test/java/com/example`.
+
+### Dependencies for Testing
+
+To use JUnit and Mockito, ensure these dependencies are in your `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.7.0</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>3.6.28</version>
+    <scope>test</scope>
+</dependency>
+```
+
+### Run All Tests
+
+To run the tests, execute:
+
+```bash
+mvn test
+```
+
+## Unit Tests Overview
+
+This project includes a comprehensive suite of unit tests to ensure the reliability and correctness of the implemented classes and methods. Below is a summary of the key unit tests:
+
+### `InitiatorTest`
+Tests for the `Initiator` class, which simulates a conversation starter in a client-server architecture.
+
+- **`testStartConversation_withValidMessages`**  
+  Validates that the `Initiator` handles a conversation correctly when provided with valid input messages. Ensures that confirmations are sent and received appropriately.
+
+- **`testStartConversation_withEmptyMessages`**  
+  Tests the behavior when empty messages are entered. Confirms that empty messages are rejected and valid messages proceed as expected.
+
+- **`testStartConversation_ResponderDisconnects`**  
+  Simulates the scenario where the responder disconnects during the conversation. Verifies that the initiator gracefully handles this situation without crashing.
+
+- **`testStartConversation_MaxMessagesReached`**  
+  Ensures that the conversation terminates after reaching the maximum allowed number of messages (`MAX_MESSAGES`). Validates that all messages and confirmations are exchanged properly.
+
+### `ResponderTest`
+Tests for the `Responder` class, which simulates a responder in a client-server architecture.
+
+- **`testStartConversation_withValidMessages`**  
+  Confirms that the responder processes valid incoming messages and sends appropriate replies. Validates the exchange of confirmations.
+
+- **`testStartConversation_withEmptyMessages`**  
+  Validates that the responder rejects empty messages and only processes valid input.
+
+- **`testStartConversation_InitiatorDisconnects`**  
+  Simulates the scenario where the initiator disconnects during the conversation. Verifies that the responder handles the disconnection gracefully.
+
+- **`testStartConversation_MaxMessagesReached`**  
+  Ensures that the responder terminates the conversation correctly after reaching the maximum allowed number of messages (`MAX_MESSAGES`).
+
+### `PlayerTest`
+Tests for the `Player` class, which represents participants in the conversation.
+
+- **`testSendMessage`**  
+  Verifies that the `sendMessage` method correctly increments the message count for a player.
+
+- **`testReceiveMessage`**  
+  Ensures that the `receiveMessage` method updates the player's last received message correctly.
+
+- **`testReturnMessage`**  
+  Validates the formatting of the string returned by the `returnMessage` method, ensuring it includes the player's name, last message, and message count.
+
+### `SingleProcessTest`
+Tests for the `SingleProcess` class, which handles a self-contained conversation between two players.
+
+- **`testHandleMessageExchange_withValidInput`**  
+  Validates that a valid message is exchanged between the sender and receiver correctly.
+
+- **`testHandleMessageExchange_withEmptyInput`**  
+  Ensures that the `handleMessageExchange` method rejects empty messages and prompts the sender for a valid input.
+
+- **`testConversationCompletes`**  
+  Confirms that the conversation completes successfully after the specified number of message exchanges (`MAX_MESSAGES`).
+
+---
+
+These tests provide robust coverage for the critical components of the application, ensuring proper behavior in normal and edge-case scenarios.
