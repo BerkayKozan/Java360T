@@ -50,10 +50,11 @@ class PlayerTest {
 
     @Test
     void testReturnMessage() {
-        // Test formatting of the return message after receiving a message and sending messages
+        // Test formatting of the return message after receiving a message and sending
+        // messages
         player.receiveMessage("Hello there");
         player.sendMessage();
-        
+
         String expectedMessage = "Initiator received: Hello there | Initiator's Message Count: 1";
         assertEquals(expectedMessage, player.returnMessage());
     }

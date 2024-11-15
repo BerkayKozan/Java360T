@@ -77,9 +77,9 @@ public class Responder {
                 out.flush();
             }
 
-            System.out.print(YELLOW + "Responder: " + RESET);
             String message;
             do {
+                System.out.print(YELLOW + "Responder: " + RESET);
                 message = scanner.hasNextLine() ? scanner.nextLine().trim() : "";
                 if (message.isEmpty()) {
                     System.out.println(RED + "Message cannot be empty. Please enter a valid message." + RESET);
