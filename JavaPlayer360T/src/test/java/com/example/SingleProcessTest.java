@@ -24,14 +24,15 @@ class SingleProcessTest {
     void testConversationEndsAfterMaxMessages() {
         // Prepare a series of messages for the initiator and responder
         String input = "Hi\nHello\nHow are you?\nI’m fine, thanks!\nWhat about you?\n" +
-        "I'm doing well too!\nGood to hear!\nYes!\nNice!\nTake care!\n" +
-        "What's up?\nNothing much!\nCool!\nSee you soon!\nGoodbye!\n" +
-        "Take it easy!\nStay safe!\nEnjoy your day!\nThank you!\nYou're welcome!\nSee you!\n";
+                "I'm doing well too!\nGood to hear!\nYes!\nNice!\nTake care!\n" +
+                "What's up?\nNothing much!\nCool!\nSee you soon!\nGoodbye!\n" +
+                "Take it easy!\nStay safe!\nEnjoy your day!\nThank you!\nYou're welcome!\nSee you!\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         Scanner scanner = new Scanner(in);
 
         int totalMessageCount = 0;
-        while (initiator.getMessageCount() < SingleProcess.MAX_MESSAGES || responder.getMessageCount() < SingleProcess.MAX_MESSAGES) {
+        while (initiator.getMessageCount() < SingleProcess.MAX_MESSAGES
+                || responder.getMessageCount() < SingleProcess.MAX_MESSAGES) {
             Player sender = (totalMessageCount % 2 == 0) ? initiator : responder;
             Player receiver = (totalMessageCount % 2 == 0) ? responder : initiator;
             SingleProcess.handleMessageExchange(scanner, sender, receiver);
