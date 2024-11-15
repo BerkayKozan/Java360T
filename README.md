@@ -43,7 +43,7 @@ The unit tests are in `src/test/java/com/example`:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/JavaPlayer360T.git
+git clone https://github.com/BerkayKozan/Java360T/.git
 cd JavaPlayer360T
 ```
 ### 2. Install Dependencies
