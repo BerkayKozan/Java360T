@@ -11,13 +11,32 @@ JavaPlayer360T is a Java-based project using Maven for managing dependencies and
 ## Project Structure
 
 The main classes are located in `src/main/java/com/example`:
-- `SingleProcess.java`: Combines both `Initiator` and `Responder` logic into a single process.
-- `Initiator.java`: The server class that initiates communication.
-- `Responder.java`: The client class that responds to `Initiator`.
+
+- **`SingleProcess.java`**  
+  Combines both `Initiator` and `Responder` logic into a single process, enabling a conversation between two players without a network setup.
+
+- **`Initiator.java`**  
+  The server class that initiates communication with the `Responder`. Handles sending, receiving, and validating messages.
+
+- **`Responder.java`**  
+  The client class that responds to the `Initiator`. Processes incoming messages, sends confirmations, and generates appropriate responses.
+
+- **`Player.java`**  
+  A helper class representing a participant in the conversation. Manages player-specific details such as the player's name, message count, and the last received message. Provides methods for sending and receiving messages.
 
 The unit tests are in `src/test/java/com/example`:
-- `InitiatorTest.java`: Unit tests for `Initiator`.
-- `ResponderTest.java`: Unit tests for `Responder`.
+
+- **`SingleProcessTest.java`**  
+  Unit tests for the `SingleProcess` class, ensuring the correct flow of messages between two players in a single process.
+
+- **`InitiatorTest.java`**  
+  Unit tests for the `Initiator` class, covering scenarios such as valid messages, empty messages, responder disconnections, and maximum message limits.
+
+- **`ResponderTest.java`**  
+  Unit tests for the `Responder` class, verifying behavior when handling valid and empty messages, initiator disconnections, and message limits.
+
+- **`PlayerTest.java`**  
+  Unit tests for the `Player` class, testing the core functionality such as message sending, receiving, and formatting the player's state.
 
 ## Getting Started
 
