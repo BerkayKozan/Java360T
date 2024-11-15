@@ -61,7 +61,7 @@ To run and test the code, open the project in an IDE that supports Maven project
 
 1. **Open** the project by selecting the `pom.xml` file.
 2. **Wait for Maven** to download dependencies.
-3. **Run the Classes**: Right-click `SingleProcess.java`, `Initiator.java` or `Responder.java` and select **Run 'SingleProcess.main()', **Run 'Initiator.main()'** or **Run 'Responder.main()'**.
+3. **Run the Classes**: Right-click `SingleProcess.java`, `Initiator.java` or `Responder.java` and select **Run 'SingleProcess.main()'**, **Run 'Initiator.main()'** or **Run 'Responder.main()'**.
 
 #### Using Eclipse
 
